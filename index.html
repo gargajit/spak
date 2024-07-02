@@ -20,12 +20,95 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
-        
+         body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-list {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            background-color: #231f20;
+            color: #EFEFEF;
+            padding: 4px;
+            padding-right: 80px;
+            margin: 0px;
+            align-items: center;
+            font-family: "Roboto", sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+        }
+        .header-list > li {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+        .list-item {
+            position: relative;
+            padding-right: 15px;
+        }
+        .list-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 25px;
+            background-color: #868383;
+        }
+        .current {
+            /* background-color: #c7233f; */
+            background-color: #af893f;
+            padding: 4px 15px;
+
+        }
+        #navbar {
+            margin-top: 10px;
+            
+        }
+        #hero {
+            margin: 10px 20px;
+        }
+        #hero > p {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <section id="header">
+        <ul class="header-list">
+            <li class="current list-item">Downloads</li>
+            <li class="list-item">Store Locator</li>
+            <li class="list-item">Lifetime Performance Warranty</li>
+            <li class="list-item">Dealership Enquiry</li>
+        </ul>
     </section>
-    
+
+    <section id="navbar">
+        <div class="navbar-container">
+            <img src="./icons/spak-logo.svg" alt="Spak logo" title="Plumber Bathware" width="206" height="58">
+        </div>
+    </section>
+    <section id="hero">
+        <h1 style="color: #af893f;">Discover SPAK Bathware: Timeless Design and Cutting-Edge Innovation.</h1>
+        <p style="color: #333333;">
+            Welcome to SPAK Bathware, where elegance and functionality converge. 
+            Our catalog showcases a luxurious array of bathware that seamlessly blends timeless design with the latest technology.
+            Explore our exquisite collection of sanitaryware and cisterns, each piece meticulously crafted from superior quality materials. 
+            Designed to elevate your bathroom's aesthetic appeal, our products offer unparalleled comfort and efficiency.<br />
+            <br />
+            At SPAK Bathware, we are dedicated to exceeding your expectations. 
+            Our commitment to innovation and customer satisfaction is evident in every product we offer. 
+            Embark on a journey of unmatched luxury and functionality with us. 
+            Transform your bathroom into a sanctuary of style with SPAK Bathware.<br />
+            <br />
+            Experience the new era of bathing excellence.
+        </p>
+        <button style="background-color: #af893f; color: #EFEFEF; padding: 8px; border: none; border-radius: 5px;">Primary Button</button>
+        <button style="background-color: #4c4e4d; color: #EFEFEF; padding: 8px; border: none; border-radius: 5px;">Secondary Button</button>
+    </section>
 </body>
 </html>
